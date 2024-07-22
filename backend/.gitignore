@@ -1,0 +1,15 @@
+node_modules/
+.vscode/
+build/
+dist/
+postgres-data/
+
+tmp/*
+!tmp/.gitkeep
+
+uploads/*
+!uploads/.gitkeep
+
+.env
+coverage
+.envrc

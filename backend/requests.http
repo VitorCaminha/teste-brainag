@@ -1,0 +1,34 @@
+GET http://localhost:3333/dashboard
+
+###
+POST http://localhost:3333/producers
+content-type: application/json
+
+{
+  "document": "72.325.362/0001-63",
+  "producerName": "John Doe",
+  "farmName": "Farm A",
+  "city": "City X",
+  "state": "State Y",
+  "acres": 100,
+  "freeArea": 60,
+  "plantedArea": 40,
+  "crops": ["Soja", "Milho"]
+}
+###
+PUT  http://localhost:3333/producers/5c087d9c-ea7d-4565-9c81-3376b37c2b15
+content-type: application/json
+
+{
+  "document": "72.325.362/0001-63",
+  "producerName": "John Doe",
+  "farmName": "Farm A",
+  "city": "City X",
+  "state": "State Y",
+  "acres": 100,
+  "freeArea": 80,
+  "plantedArea": 40,
+  "crops": ["Soja", "Milho"]
+}
+###
+DELETE  http://localhost:3333/producers/c497d028-c84d-4eea-8ca6-3aadc2eaa5e3

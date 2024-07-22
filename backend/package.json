@@ -1,0 +1,44 @@
+{
+  "name": "teste-vaga-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/index.ts",
+    "test": "node --test --require ts-node/register -r tsconfig-paths/register",
+    "build": "rimraf dist && tsc",
+    "start": "node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@faker-js/faker": "^8.4.1",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/supertest": "^6.0.2",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0",
+    "prisma": "^5.17.0",
+    "rimraf": "^6.0.1",
+    "supertest": "^7.0.0",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "inversify": "^6.0.2",
+    "reflect-metadata": "^0.2.2",
+    "zod": "^3.23.8"
+  },
+  "prisma": {
+    "schema": "src/infra/providers/prisma/database/schema.prisma",
+    "seed": "ts-node-dev src/infra/providers/prisma/database/seed.ts"
+  }
+}
